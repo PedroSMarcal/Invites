@@ -1,44 +1,83 @@
 body {
+    font-family: Arial, sans-serif;
     margin: 0;
+    padding: 0;
     display: flex;
-    align-items: center;
     justify-content: center;
-    height: 100vh;
-}
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+    background-color: #c0b9a6;
+  }
 
-.card h2 {
-    font-weight: bolder;
-    color:#ffffff;
-    text-shadow: -2px 2px 1px rgba(0, 0, 0, 1);
-}
-
-hr.dashed {
-    border-top: 3px dashed #bbb;
-}
-
-.card {
-    position: relative; /* Add position relative */
-    text-align: center;
-    padding: 20px;
+  .card {
+    display: flex;
+    max-width: 80%;
+    width: 1000px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
+    overflow: hidden;
+    margin: 20px;
+  }
+
+  .left-card,
+  .right-card {
+    flex: 1;
+    padding: 20px;
+  }
+
+  .left-card {
     background-color: #ffffff;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+  }
+
+  .right-card {
+    background-image: url("../assets/rotulo4.webp");
+    background-size: cover;
+    background-position: top;
+    font-weight: bolder;
+    color: #ffffff;
+    text-shadow: -2px 2px 1px rgba(0, 0, 0, 1);
+    font-size: larger;
+  }
+
+  .info {
+    text-align: center;
+  }
+
+  .card-content {
+    margin-top: 20px;
+  }
+
+  .address {
+    text-align: center;
+    font-size: 16px;
+    background-color: #f5f5f5;
+    padding: 15px;
+    border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
+  }
 
-.card img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 1; /* Adjust the opacity as needed */
-    border-radius: 10px; /* Apply the same border-radius as the card */
-}
+  .address-heading {
+    font-weight: bold;
+  }
 
+  .address a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+  }
 
-.card h2, .card p, .card address {
-    position: relative; /* Add position relative to allow text to overlay */
-    z-index: 1; /* Ensure text is above the image */
-}
-
+  @keyframes floatUpAndDown {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
