@@ -1,11 +1,5 @@
 function getGoogleAPIKey()  {
-    const { GOOGLE_API_KEY } = process.env
- 
-    // if (length(GOOGLE_API_KEY) == 0) {
-        console.log(GOOGLE_API_KEY)
-    // }
-
-    return GOOGLE_API_KEY
+    return process.env.GOOGLE_API_KEY
 }
 
 function initMap() {
@@ -26,6 +20,7 @@ function initMap() {
 // Load Google Maps API
 function loadMapScript() {
     const apiKey = getGoogleAPIKey(); // Replace with your API key
+    console.log(apiKey)
     const script = document.createElement("script");
     script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&callback=initMap`;
     script.async = true;

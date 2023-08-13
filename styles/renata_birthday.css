@@ -4,7 +4,10 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-image: '../assets/festa-51.png';
+    background-image: url('../assets/festa-51.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .card {
